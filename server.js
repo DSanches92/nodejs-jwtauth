@@ -39,6 +39,9 @@ app.get("/", (req, res) => {
   res.json({ message: "Node.js + JWT Authentication!" })
 })
 
+require("./app/routes/auth.routers")(app)
+require("./app/routes/user.routers")(app)
+
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
   console.log(`Servidor rodando na porta ${PORT}.`)

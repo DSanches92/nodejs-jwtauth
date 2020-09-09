@@ -1,7 +1,6 @@
 const jwt = require("jsonwebtoken")
 const config = require("../config/auth.config.js")
 const db = require("../models")
-const { ne } = require("sequelize/types/lib/operators")
 const User = db.user
 
 verificaToken = (req, res, next) => {
